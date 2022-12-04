@@ -1,0 +1,56 @@
+--Window
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Town Script by Ike", "Ocean")
+
+
+
+
+--Main Scripts
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main Scripts")
+
+--Gun Mod
+MainSection:NewButton("Gun Mod", "Modifies the guns", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/GunMod'))()
+end)
+
+--Plot Copier
+MainSection:NewButton("Plot Copier", "Lets you copy plot. YOU MUST HAVE BTOOLS EQUIPED WITH AN EMPTY PLOT", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/PlotCopier?t='..tostring(tick())))()
+end)
+
+--Invisible Tool
+MainSection:NewButton("Invisible Tool", "Once enabled, you are invisible. You can use guns with it", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/InvisibleTool'))()
+end)
+
+--Render Scripts
+local Main = Window:NewTab("Render")
+local RenderSection = Main:NewSection("Render Scripts")
+
+--ESP
+RenderSection:NewButton("ESP", "ESP script.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/ESP'))()
+end)
+
+--Fullbright
+RenderSection:NewButton("Fullbright", "Lights up everything.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/Fullbright'))()
+end)
+
+--Character
+local Main = Window:NewTab("Character")
+local CharSection = Main:NewSection("Character Modification Scripts")
+
+--Speed after death
+CharSection:NewButton("Perm Speed 32", "Even after you die, you still have speed 32", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/Walkspeed'))()
+end)
+
+--Noclip
+CharSection:NewButton("Noclip", "Even after you die, you still have speed 32", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/Noclip'))()
+end)
+
+
+
