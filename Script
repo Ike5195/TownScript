@@ -1,56 +1,84 @@
---Window
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Town Script by Ike", "Ocean")
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
+local Window = OrionLib:MakeWindow({Name = "Town Script by Ike#5195", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
+Tab:AddButton({
+	Name = "Plot Copier",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/PlotCopier?t='..tostring(tick())))()
+  	end    
+})
 
---Main Scripts
-local Main = Window:NewTab("Main")
-local MainSection = Main:NewSection("Main Scripts")
+Tab:AddButton({
+	Name = "Invisible Tool",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/InvisibleTool'))()
+  	end    
+})
 
---Gun Mod
-MainSection:NewButton("Gun Mod", "Modifies the guns", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/GunMod'))()
-end)
+local Tab = Window:MakeTab({
+	Name = "Combat",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
---Plot Copier
-MainSection:NewButton("Plot Copier", "Lets you copy plot. YOU MUST HAVE BTOOLS EQUIPED WITH AN EMPTY PLOT", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/PlotCopier?t='..tostring(tick())))()
-end)
+Tab:AddButton({
+	Name = "Gun Mod",
+	Callback = function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/GunMod'))()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/GunModRespawn'))()
+  	end    
+})
 
---Invisible Tool
-MainSection:NewButton("Invisible Tool", "Once enabled, you are invisible. You can use guns with it", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/InvisibleTool'))()
-end)
+local Tab = Window:MakeTab({
+	Name = "Render",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
---Render Scripts
-local Main = Window:NewTab("Render")
-local RenderSection = Main:NewSection("Render Scripts")
+Tab:AddButton({
+	Name = "Fullbright",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/Fullbright'))()
+  	end    
+})
 
---ESP
-RenderSection:NewButton("ESP", "ESP script.", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/ESP'))()
-end)
+Tab:AddButton({
+	Name = "ESP",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/ESP'))()
+  	end    
+})
 
---Fullbright
-RenderSection:NewButton("Fullbright", "Lights up everything.", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/Fullbright'))()
-end)
+local Tab = Window:MakeTab({
+	Name = "Character",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
---Character
-local Main = Window:NewTab("Character")
-local CharSection = Main:NewSection("Character Modification Scripts")
+Tab:AddButton({
+	Name = "Walkspeed 32",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/Walkspeed'))()
+  	end    
+})
 
---Speed after death
-CharSection:NewButton("Perm Speed 32", "Even after you die, you still have speed 32", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/Walkspeed'))()
-end)
+Tab:AddButton({
+	Name = "Noclip",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/Noclip'))()
+  	end    
+})
 
---Noclip
-CharSection:NewButton("Noclip", "Even after you die, you still have speed 32", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/Noclip'))()
-end)
-
-
-
+Tab:AddButton({
+	Name = "Infinite Jump",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Ike5195/TownScript/main/InfJump'))()
+  	end    
+})
